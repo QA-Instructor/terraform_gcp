@@ -12,7 +12,7 @@ resource "google_compute_instance" "lbg-network" {
   }
 
   network_interface {
-    network = google_compute_network.lbg-network.id
+    subnetwork = google_compute_subnetwork.subnet1.id
       access_config {
         network_tier = "STANDARD"
       }

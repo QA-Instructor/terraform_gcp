@@ -9,4 +9,8 @@ resource "google_compute_firewall" "lbg-firewall" {
 
   source_ranges = ["0.0.0.0/0"]
   target_tags = ["port-22", "http-server", "https-server", "port-3000", "port-5000"]
+
+  depends_on = [
+    google_compute_network.lbg-network
+  ]
 }
