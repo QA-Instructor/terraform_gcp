@@ -1,4 +1,4 @@
-resource "google_compute_instance" "lbg-network" {
+resource "google_compute_instance" "mission-instance" {
   machine_type = "e2-medium"
   count = var.vm_count
   name = "${var.vm_name}-${count.index + 1}"
